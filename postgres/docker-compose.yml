@@ -4,8 +4,8 @@ services:
     postgres:
         image: postgres
         ports:
-            - "5439:5439"
+            - "5432:5432"
         environment:
             POSTGRES_PASSWORD: password
         volumes:
-          - ./data:/home
+            - ./data:/home
