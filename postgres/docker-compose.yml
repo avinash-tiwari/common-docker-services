@@ -9,3 +9,4 @@ services:
             POSTGRES_PASSWORD: password
         volumes:
           - ./data:/home
+          - ./dump:/docker-entrypoint-initdb.d
