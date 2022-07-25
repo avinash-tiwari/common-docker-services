@@ -8,4 +8,4 @@ services:
         environment:
             POSTGRES_PASSWORD: password
         volumes:
-            - ./data:/home
+          - ./data:/home
