@@ -3,6 +3,7 @@ version: "3.7"
 services:
     postgres:
         image: postgres:18
+        restart: unless-stopped
         dns:
             - 8.8.8.8
             - 1.1.1.1
