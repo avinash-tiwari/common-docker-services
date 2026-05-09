@@ -3,10 +3,16 @@ version: "3.7"
 services:
     postgres:
         image: postgres
+        dns:
+            - 8.8.8.8
+            - 1.1.1.1
         ports:
             - "5432:5432"
         environment:
-            POSTGRES_PASSWORD: password
+            POSTGRES_PASSWORD: ${DB_PASSWORD}
+            POSTGRES_USER: ${DB_USER}
+            POSTGRES_DB: ${DB_NAME}
+            PGSSLMODE: require
         volumes:
           - ./data:/home
           - ./dump:/docker-entrypoint-initdb.d
